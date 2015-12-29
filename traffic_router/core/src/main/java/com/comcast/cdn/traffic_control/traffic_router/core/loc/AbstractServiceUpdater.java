@@ -294,6 +294,8 @@ public abstract class AbstractServiceUpdater {
 	protected boolean sourceCompressed = true;
 	protected String tmpPrefix = "loc";
 	protected String tmpSuffix = ".dat";
+	//TODO: Make this configurable
+	protected boolean uncompressDataFile = true;
 	protected File downloadDatabase(final String url, final File existingDb) throws IOException {
 		LOGGER.info("[" + getClass().getSimpleName() + "] Downloading database: " + url);
 		final URL dbURL = new URL(url);
